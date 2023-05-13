@@ -1,120 +1,30 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { BlobDiv, BlobG1, BlobG2, BlobSection, Name, NameDiv, NameHeader } from '@/util/styles'
+import { BlobDiv, BlobG1, BlobG2, BlobSection, NameDiv, NameHeader } from '@/styles'
+import Name from '@/components/Name'
+import pokemongif from '../../public/images/200w.gif'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-24">
-
-
+		<main className="flex min-h-screen flex-col items-center p-24">
 				<Image
-					src="/meliodaschibi.png"
+					src={pokemongif}
 					alt="Meliodas"
 					width={180}
 					height={37}
 					priority
+                    className='pointer-events-none'
 				/>
-        <NameHeader>
-          <h1>console<span className="text-white">.<span style={{ color:'rgb(75 136 237)' }}>log</span></span>("</h1>
-          <NameDiv>
-            <Name>Hey, My name is Tony!</Name>
-          </NameDiv>
-          <h1 className="closure">");</h1>
-        </NameHeader>
-			
-
-
-			<div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-				<a
-					href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-					className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<h2
-						className={`${inter.className} mb-3 text-2xl font-semibold`}
-					>
-						Docs{" "}
-						<span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-							-&gt;
-						</span>
-					</h2>
-					<p
-						className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-					>
-						Find in-depth information about Next.js features and
-						API.
-					</p>
-				</a>
-
-				<a
-					href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-					className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<h2
-						className={`${inter.className} mb-3 text-2xl font-semibold`}
-					>
-						Learn{" "}
-						<span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-							-&gt;
-						</span>
-					</h2>
-					<p
-						className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-					>
-						Learn about Next.js in an interactive course
-						with&nbsp;quizzes!
-					</p>
-				</a>
-
-				<a
-					href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-					className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<h2
-						className={`${inter.className} mb-3 text-2xl font-semibold`}
-					>
-						Templates{" "}
-						<span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-							-&gt;
-						</span>
-					</h2>
-					<p
-						className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-					>
-						Discover and deploy boilerplate example
-						Next.js&nbsp;projects.
-					</p>
-				</a>
-
-				<a
-					href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-					className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<h2
-						className={`${inter.className} mb-3 text-2xl font-semibold`}
-					>
-						Deploy{" "}
-						<span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-							-&gt;
-						</span>
-					</h2>
-					<p
-						className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-					>
-						Instantly deploy your Next.js site to a shareable URL
-						with Vercel.
-					</p>
-				</a>
-			</div>
+                <h1 className='mx-auto text-5xl font-apple font-semibold text-white mb-10'>
+                    hey i'm tony <span className="ec ec-wave wave"></span>
+                </h1>
+                <div className="opacity-60 text-sky-700 rounded-xl mx-auto p-6 bg-slate-300 font-apple">
+                       <h1 className='font-semibold text-4xl'>web developer</h1>
+                       <p className='text-lg text-blue-500'><a href='https://react.dev'>react</a></p>
+                       <p className='text-lg text-blue-500'><a href='https://nextjs.org/'>next.js</a></p>
+                </div>
 		</main>
   );
 }

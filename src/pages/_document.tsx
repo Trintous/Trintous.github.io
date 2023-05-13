@@ -41,7 +41,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+            <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css' />
+        </Head>
         <body>
           <Main />
           <NextScript />

@@ -1,8 +1,9 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import MeliodasChibi from '../../public/meliodaschibi.png'
 import { useEffect, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from '@/styles/theme';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isDarkMode, setIsDarkMode] = useState(false);
